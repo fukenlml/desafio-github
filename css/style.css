@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.grilla {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0.5fr;
+
+    grid-template-areas:
+        "logo logo logo logo"
+        "nav nav nav nav"
+        "section1 section1 section1 aside"
+        "section2 section2 section2 aside"
+        "footer footer footer footer";
+}
+
+.logo {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+
+}
+
+.nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    background-color: rgb(220, 4, 4);
+    padding: .5rem;
+}
+
+.nav ul {
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.nav ul li a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    margin: 03rem;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav ul li a:hover {
+    background-color: white;
+    color: black;
+}
+
+.aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+
+
+}
+
+.asidetit1 {
+    font-size: 1.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 1rem;
+    color: red;
+}
+
+.section1 {
+    grid-area: section1;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    position: relative;
+    left: 325px;
+}
+
+.section1text {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.1rem;
+    max-width: 900px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+.section1titl {
+    font-size: 1.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.section2 {
+    grid-area: section2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.section2title {
+    background: darkred;
+    padding: .5rem;
+    color: white;
+
+
+}
+
+.section2text {
+    max-width: 900px;
+    padding: .5rem;
+}
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+}
+
+.footerbotones i {
+    padding: 0rem .3rem 0rem .3rem;
+    font-size: 1.1rem;
+}
+
+
+
+
+/* RANKING */
+.tabla1 {
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    border: solid .2rem;
+}
+
+.bordesNumeros {
+    border: solid .1rem;
+
+}
+
+/* FORMULARIO // ESCRIBENOS */
+.formulario {
+    position: relative;
+    right: 200px;
+    background-color: rgb(255, 79, 79);
+    margin: auto;
+    padding: 1.5rem;
+    border-radius: .3rem;
+}
+
+.formularioCajas {
+    margin: .5rem;
+    border-radius: .3rem;
+    border-color: white;
+    padding: 5px;
+}
+
+
+
+.textoForm {
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+   
+}
+
+.formBoton{
+    position: relative;
+    left: 100px;
+    padding: .5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    border-radius: .3rem;
+    border: none;
+    color: white;
+    background-color: rgb(146, 50, 255);
+    
+}
+.formBoton:hover{
+    background-color: yellow;
+    border: none;
+    
+}
+.tituloForm{
+    position: relative;
+    right: 200px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(255, 79, 79);
+    margin: auto;
+    color: white;
+    padding: .5rem;
+    border-radius: .3rem;
+}
+.footerForm{
+    position: relative;
+    top: 208px;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .grilla {
+        grid-template-areas:
+            "logo logo logo logo"
+            "nav nav nav nav"
+            "section1 section1 section1 section1"
+            "section2 section2 section2 section2"
+            "footer footer footer footer";
+    }
+
+    .aside {
+        display: none;
+    }
+
+    .section1 {
+        left: 20px;
+    }
+}
