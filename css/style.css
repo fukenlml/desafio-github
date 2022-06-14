@@ -30,7 +30,7 @@
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    background-color: rgb(220, 4, 4);
+
     padding: .5rem;
 }
 
@@ -138,100 +138,152 @@
     font-size: 1.1rem;
 }
 
-
-
-
-/* RANKING */
-.tabla1 {
-    background-color: gray;
-    display: flex;
-    align-items: center;
-    border: solid .2rem;
+.gradianteMenu {
+    background-image: linear-gradient(to left, rgb(220, 4, 4), rgb(209, 209, 91));
 }
 
-.bordesNumeros {
-    border: solid .1rem;
+.gradianteMenu :hover {
+    transform: scale(1.2);
+    transition: 1.5s;
+}
+
+.escalaLogo :hover {
+    transform: scale(0.5, 0.5);
 
 }
 
-/* FORMULARIO // ESCRIBENOS */
-.formulario {
-    position: relative;
-    right: 200px;
-    background-color: rgb(255, 79, 79);
-    margin: auto;
-    padding: 1.5rem;
-    border-radius: .3rem;
+.redesColor :hover {
+    color: red;
+    font-size: 2rem;
 }
 
-.formularioCajas {
-    margin: .5rem;
-    border-radius: .3rem;
-    border-color: white;
-    padding: 5px;
+.redesScale :hover {
+    transform: scale(1.1);
+}
+
+.redesColor {
+    animation-name: cambioColor;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;   
 }
 
 
 
-.textoForm {
-    font-family: 'Josefin Sans', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-   
-}
 
-.formBoton{
-    position: relative;
-    left: 100px;
-    padding: .5rem;
-    font-family: 'Josefin Sans', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    border-radius: .3rem;
-    border: none;
-    color: white;
-    background-color: rgb(146, 50, 255);
+    /* RANKING */
+    .tabla1 {
+        background-color: gray;
+        display: flex;
+        align-items: center;
+        border: solid .2rem;
+    }
+
+    .bordesNumeros {
+        border: solid .1rem;
+
+    }
+
+    /* FORMULARIO // ESCRIBENOS */
+    .formulario {
+        position: relative;
+        right: 200px;
+        background-color: rgb(255, 79, 79);
+        margin: auto;
+        padding: 1.5rem;
+        border-radius: .3rem;
+    }
+
+    .formularioCajas {
+        margin: .5rem;
+        border-radius: .3rem;
+        border-color: white;
+        padding: 5px;
+    }
+
+
+
+    .textoForm {
+        font-family: 'Josefin Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        color: white;
+
+    }
+
+    .formBoton {
+        position: relative;
+        left: 100px;
+        padding: .5rem;
+        font-family: 'Josefin Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        border-radius: .3rem;
+        border: none;
+        color: white;
+        background-color: rgb(146, 50, 255);
+
+    }
+
+    .formBoton:hover {
+        background-color: yellow;
+        border: none;
+
+    }
+
+    .tituloForm {
+        position: relative;
+        right: 200px;
+        font-family: 'Josefin Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        background-color: rgb(255, 79, 79);
+        margin: auto;
+        color: white;
+        padding: .5rem;
+        border-radius: .3rem;
+    }
+
+    .footerForm {
+        position: relative;
+        top: 208px;
+    }
+
+
+
+    @keyframes cambioColor {
+        0% {
+            color: red;
+        }
     
-}
-.formBoton:hover{
-    background-color: yellow;
-    border: none;
+        25% {
+            color: orange;
+        }
     
-}
-.tituloForm{
-    position: relative;
-    right: 200px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    background-color: rgb(255, 79, 79);
-    margin: auto;
-    color: white;
-    padding: .5rem;
-    border-radius: .3rem;
-}
-.footerForm{
-    position: relative;
-    top: 208px;
-}
-
-
-
-
-
-@media (max-width: 768px) {
-    .grilla {
-        grid-template-areas:
-            "logo logo logo logo"
-            "nav nav nav nav"
-            "section1 section1 section1 section1"
-            "section2 section2 section2 section2"
-            "footer footer footer footer";
+        50% {
+            color: yellow;
+        }
+    
+        75% {
+            color: green;
+        }
+    
+        100% {
+            color: blue;
+        }
     }
 
-    .aside {
-        display: none;
-    }
+    @media (max-width: 768px) {
+        .grilla {
+            grid-template-areas:
+                "logo logo logo logo"
+                "nav nav nav nav"
+                "section1 section1 section1 section1"
+                "section2 section2 section2 section2"
+                "footer footer footer footer";
+        }
 
-    .section1 {
-        left: 20px;
+        .aside {
+            display: none;
+        }
+
+        .section1 {
+            left: 20px;
+        }
     }
-}
